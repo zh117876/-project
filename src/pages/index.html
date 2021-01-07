@@ -7,7 +7,9 @@
     
     <link rel="stylesheet" href="../css/iconfont.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../lib/swiper/swiper.css">
     <link rel="stylesheet" href="../css/home.css">
+    
 </head>
 <body>
     <div id="bigbox">
@@ -136,15 +138,65 @@
             </div>
         </header>
         <div class="content container">
-            <div class="img_box">
-                <ul>
-                    <li><a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0ef4160c861b998239bce9adb82341e7.jpg?thumb=1&w=1226&h=460&f=webp&q=90" alt=""></a></li>
-                    <li><a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e7bd1f48d954cdf122b51ce0a8374b3.jpg?w=2452&h=920" alt=""></a></li>
-                    <li><a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/921811dd1557b9baa907cb828c1286af.jpg?thumb=1&w=1226&h=460&f=webp&q=90" alt=""></a></li>
-                    <li><a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9ebff5f5c1f52f2dbdd611897adbefd4.jpg?thumb=1&w=1226&h=460&f=webp&q=90" alt=""></a></li>
-                </ul>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0ef4160c861b998239bce9adb82341e7.jpg?thumb=1&w=1226&h=460&f=webp&q=90" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e7bd1f48d954cdf122b51ce0a8374b3.jpg?w=2452&h=920" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/921811dd1557b9baa907cb828c1286af.jpg?thumb=1&w=1226&h=460&f=webp&q=90" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9ebff5f5c1f52f2dbdd611897adbefd4.jpg?thumb=1&w=1226&h=460&f=webp&q=90" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+                <!-- 如果需要滚动条 -->
+                <div class="swiper-scrollbar"></div>
             </div>
         </div>
     </div>
+    <script src="../js/public.js"></script>
+    <script src="../lib/swiper/swiper.js"></script>
+    <script>
+          var mySwiper = new Swiper ('.swiper-container', {
+                // direction: 'vertical', // 垂直切换选项
+                loop: true, // 循环模式选项
+                autoplay:true,
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable:true
+                },
+                
+                // 如果需要前进后退按钮
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+                
+                // 如果需要滚动条
+                /* scrollbar: {
+                el: '.swiper-scrollbar',
+                }, */
+            })
+    </script>
 </body>
 </html>
